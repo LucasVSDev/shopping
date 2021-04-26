@@ -1,11 +1,11 @@
 import React from 'react'
 import { Wrapper } from './AppContainer.styled'
 
-function AppContainer ({ left , middle, right }) {
+function AppContainer({ left, middle, right }) {
   return <Wrapper>
-    <div>{ left }</div>
-    <div>{ middle }</div>
-    <div>{ right }</div>
+    <div>{left}</div>
+    <div>{middle}</div>
+    <div>{right}</div>
   </Wrapper>
 }
 
