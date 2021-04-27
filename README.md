@@ -1,8 +1,8 @@
 # Shopping com React
 
-Código fonte do projeto desenvolvido durante uma aula disponível no [Github](https://github.com/algaworks/algashopping) que consiste em um Shopping usando React e Context Api e Hooks e uma api de produtos.
+Código fonte do projeto desenvolvido durante uma aula disponível no [Github](https://github.com/algaworks/algashopping) que consiste em um Shopping usando React e Hooks e uma Api de produtos.
 
-Este projeto utiliza o [Create React App](https://github.com/facebook/create-react-app), [Context Api](https://pt-br.reactjs.org/docs/context.html) e [Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html).
+Este projeto utiliza o [Create React App](https://github.com/facebook/create-react-app) e [Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html).
 
 ## Projeto final
 
