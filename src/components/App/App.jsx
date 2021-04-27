@@ -1,38 +1,45 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import LineChart from '../../shared/LineChart/lineChart'
 import AppContainer from '../AppContainer/AppContainer'
 import AppHeader from '../AppHeader/AppHeader'
-import Checkbox from '../../shared/Checkbox/checkbox'
+import ShoppingList from '../ShoppingList/ShoppingList'
 import { Wrapper, Container } from './App.styles'
+import productsMock from '../../mocks/products.json'
 
 function App() {
   const colors = ['#62CBC6', '#00ABAD', '#00858C', '#006073', '#004D61']
 
-  const [lettuce, setLettuce] = useState(true)
+  const [products, setProducts] = useState(productsMock.products)
+  const [selectedProducts, setSelectedProducts] = useState([])
 
+  useEffect(() => {
+    const newSelectedProducts = products.filter(product => product.checked)
+    setSelectedProducts(newSelectedProducts)
+  }, [products])
+
+  function handleToggle(id, checked) {
+    const newProducts = products.map(product =>
+      product.id === id
+        ? { ...product, checked: !product.checked }
+        : product
+    )
+    setProducts(newProducts)
+  }
 
   return <Wrapper>
     <Container>
       <AppHeader />
       <AppContainer
-        left={<div >
-          produtos disponiveis:
-
-          <Checkbox
-            value={lettuce}
-            title="Alface"
-            onClick={() => setLettuce(!lettuce)}
-          />
-        </div>}
-        middle={<div>
-          sua lista de compras:
-
-          <Checkbox
-            value={lettuce}
-            title="Alface"
-            onClick={() => setLettuce(!lettuce)}
-          />
-        </div>}
+        left={<ShoppingList
+          title="Produtos disponiveis"
+          products={products}
+          onToggle={handleToggle}
+        />}
+        middle={<ShoppingList
+          title="Sua lista de compras"
+          products={selectedProducts}
+          onToggle={handleToggle}
+        />}
         right={<div>
           estatisticas:
 
