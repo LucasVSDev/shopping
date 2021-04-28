@@ -6,7 +6,7 @@ Este projeto utiliza o [Create React App](https://github.com/facebook/create-rea
 
 ## Projeto final
 
- visualizar [Shopping](https://zen-darwin-3d9459.netlify.app/)
+ *Visualizar* [Shopping](https://zen-darwin-3d9459.netlify.app/)
 
 ## Instalação
 
